@@ -1,5 +1,35 @@
 public class Chapter06 {
     public static void main(String[] args) {
+        // 부모 클래스
+        class Animal {
+            void sound() {
+                System.out.println("소리를 냅니다");
+            }
+        }
+
+        // 자식 클래스 Dog
+        class Dog extends Animal {
+            @Override
+            void sound() {
+                System.out.println("멍멍!");
+            }
+
+            void bark() {
+                System.out.println("Dog만의 행동: 멍멍");
+            }
+
+            void callSuperSound() {
+                super.sound(); // 부모 메서드 호출
+            }
+        }
+
+        // 자식 클래스 Cat
+        class Cat extends Animal {
+            @Override
+            void sound() {
+                System.out.println("야옹!");
+            }
+        }
 
         // 1. 상속
         System.out.println("1. 상속");
@@ -35,33 +65,3 @@ public class Chapter06 {
     }
 }
 
-// 부모 클래스
-class Animal {
-    void sound() {
-        System.out.println("소리를 냅니다");
-    }
-}
-
-// 자식 클래스 Dog
-class Dog extends Animal {
-    @Override
-    void sound() {
-        System.out.println("멍멍!");
-    }
-
-    void bark() {
-        System.out.println("Dog만의 행동: 멍멍");
-    }
-
-    void callSuperSound() {
-        super.sound(); // 부모 메서드 호출
-    }
-}
-
-// 자식 클래스 Cat
-class Cat extends Animal {
-    @Override
-    void sound() {
-        System.out.println("야옹!");
-    }
-}
