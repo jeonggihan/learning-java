@@ -4,18 +4,21 @@ import java.util.*;
 
 public class CardGame {
 
-    Map<String, Set<Integer>> numbersByKind = new HashMap<>();
-    Map<Integer, Set<String>> kindsByNumber = new HashMap<>();
-
     public static void main(String[] args) {
 
         CardGame cardGame = new CardGame();
 
-        System.out.println(cardGame.solution(new String[] {"S1", "S2", "S8", "D8", "H8", "D3"}));
+        // -ea active
+        assert cardGame.solution(new String[] {"S1", "S2", "S8", "D8", "H8", "D3"}) == 27;
+        assert cardGame.solution(new String[] {"H3", "D2", "S1"}) == 9;
 
     }
 
     public int solution(String [] datas) {
+
+        Map<String, Set<Integer>> numbersByKind = new HashMap<>();
+        Map<Integer, Set<String>> kindsByNumber = new HashMap<>();
+
         int result = 0;
         for (String data : datas) {
             String kind = data.substring(0, 1);
