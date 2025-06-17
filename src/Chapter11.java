@@ -1,5 +1,7 @@
 // Chapter11 - 문자열 처리
 public class Chapter11 {
+
+    private final static String flag = "Y";
     public static void main(String[] args) {
         String text = " Java Programming ";
 
@@ -8,6 +10,7 @@ public class Chapter11 {
         System.out.println("toUpperCase: " + text.toUpperCase());
         System.out.println("contains 'Java': " + text.contains("Java"));
         System.out.println("replace: " + text.replace(" ", ""));
+        System.out.println("immutable string memory saving : " + flag);
 
         // 텍스트 블록 (Java 15+)
         String name = "홍길동";

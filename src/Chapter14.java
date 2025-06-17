@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.function.Predicate;
+
 // Chapter14 - 내부 클래스와 람다
 public class Chapter14 {
     public static void main(String[] args) {
@@ -15,4 +19,6 @@ public class Chapter14 {
         Runnable task = () -> System.out.println("Hello from Lambda");
         task.run();
     }
+
+
 }
